@@ -8,4 +8,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = "http://localhost:4200")
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+    public User findByUsername(String username);
 }

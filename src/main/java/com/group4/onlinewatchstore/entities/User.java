@@ -24,7 +24,10 @@ public class User {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "enmail", nullable = false, unique = true)
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     @Column(name = "first_name", nullable = false, length = 100)
@@ -45,9 +48,6 @@ public class User {
     @Type(type = "json")
     @Column(name = "roles", nullable = false, columnDefinition = "json")
     private List<String> roles;
-
-    @Column(name = "status")
-    private boolean status;
 
     @CreationTimestamp
     @Column(name = "created_at")
