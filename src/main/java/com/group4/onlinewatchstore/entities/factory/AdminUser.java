@@ -1,7 +1,7 @@
 package com.group4.onlinewatchstore.entities.factory;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import com.group4.onlinewatchstore.entities.singleton.RoleEnumSingleton;
+
 import java.util.List;
 
 public class AdminUser extends User{
@@ -23,8 +23,12 @@ public class AdminUser extends User{
 
     @Override
     public List<String> getRoles() {
-        List<String> roles = new ArrayList<>();
-        roles.add("ADMIN");
-        return roles;
+//        List<String> roles = new ArrayList<>();
+//        roles.add("ADMIN");
+//        return roles;
+
+        //Enum Singleton
+        RoleEnumSingleton enumSingleton = RoleEnumSingleton.GETINSTANCE;
+        return enumSingleton.setAdmin();
     }
 }

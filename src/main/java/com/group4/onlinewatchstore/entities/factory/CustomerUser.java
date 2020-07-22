@@ -1,10 +1,8 @@
 package com.group4.onlinewatchstore.entities.factory;
 
-import javax.persistence.Column;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import com.group4.onlinewatchstore.entities.singleton.RoleEnumSingleton;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CustomerUser extends User {
 
@@ -29,8 +27,12 @@ public class CustomerUser extends User {
 
     @Override
     public List<String> getRoles() {
-        List<String> roles = new ArrayList<>();
-        roles.add("CUSTOMER");
-        return roles;
+//        List<String> roles = new ArrayList<>();
+//        roles.add("CUSTOMER");
+//        return roles;
+
+        //Enum Singleton
+        RoleEnumSingleton enumSingleton = RoleEnumSingleton.GETINSTANCE;
+        return enumSingleton.setCustomer();
     }
 }

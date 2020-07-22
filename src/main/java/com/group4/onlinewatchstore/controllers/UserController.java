@@ -47,9 +47,9 @@ public class UserController {
         }
 
         UserFactory userFactory = new UserFactory();
-        User userwithrole = userFactory.getUser(user.getRoles().get(0));
+        User userwithrole = userFactory.getUser(user.getRoles().get(0).toString());
 
-        return ResponseEntity.ok(user);
+        return ResponseEntity.ok(userwithrole);
     }
 
     @GetMapping("/")

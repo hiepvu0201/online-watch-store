@@ -1,12 +1,6 @@
 package com.group4.onlinewatchstore.entities.factory;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 public class UserFactory {
-
-    public static final String ADMIN="ADMIN";
-    public static final String CUSTOMER="CUSTOMER";
 
     public UserFactory() {
     }
@@ -18,7 +12,7 @@ public class UserFactory {
             case "CUSTOMER":
                 return new CustomerUser();
             default:
-                return new CustomerUser();
+                throw new IllegalArgumentException("This role is unsupported");
         }
     }
 }
