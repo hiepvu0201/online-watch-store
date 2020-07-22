@@ -1,6 +1,6 @@
 package com.group4.onlinewatchstore.service;
 
-import com.group4.onlinewatchstore.entities.User;
+import com.group4.onlinewatchstore.entities.factory.User;
 import com.group4.onlinewatchstore.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

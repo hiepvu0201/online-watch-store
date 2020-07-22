@@ -27,16 +27,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-                .authorizeRequests().antMatchers("/api/v1/user").permitAll()
-                .antMatchers(HttpMethod.POST,"/api/v1/user/add").hasRole("ADMIN")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin().permitAll();;
+        http.csrf().disable();
+//                .authorizeRequests()
+//                .anyRequest().authenticated()
+//                .and()
+//                .formLogin().permitAll();;
     }
 
     @Bean
     public BCryptPasswordEncoder encodePWD() {
         return new BCryptPasswordEncoder();
     }
+
+
 }

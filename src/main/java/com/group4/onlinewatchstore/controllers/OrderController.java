@@ -1,8 +1,6 @@
 package com.group4.onlinewatchstore.controllers;
 
-import com.group4.onlinewatchstore.entities.Brand;
 import com.group4.onlinewatchstore.entities.Order;
-import com.group4.onlinewatchstore.entities.User;
 import com.group4.onlinewatchstore.exceptions.ResourceNotFoundException;
 import com.group4.onlinewatchstore.repositories.OrderRepository;
 import com.group4.onlinewatchstore.repositories.UserRepository;

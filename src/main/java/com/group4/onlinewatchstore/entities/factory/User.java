@@ -1,5 +1,6 @@
-package com.group4.onlinewatchstore.entities;
+package com.group4.onlinewatchstore.entities.factory;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

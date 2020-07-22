@@ -77,9 +77,9 @@ public class ProductController {
         product.setUnitInStock(productDetails.getUnitInStock());
         product.setProductImages(productDetails.getProductImages());
         product.setBrandId(productDetails.getBrandId());
+        product.setCategoryId(productDetails.getCategoryId());
         product.setBrand(brandRepository.findById(product.getBrandId())
                 .orElseThrow(() -> new ResourceNotFoundException("Brand not found with id " + product.getBrandId())));
-        product.setCategoryId(productDetails.getCategoryId());
         product.setCategory(categoryRepository.findById(product.getCategoryId())
                 .orElseThrow(() -> new ResourceNotFoundException("Category not found with id " + product.getCategoryId())));
         final Product updateProduct = productRepository.save(product);

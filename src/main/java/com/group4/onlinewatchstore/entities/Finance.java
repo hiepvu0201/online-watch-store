@@ -1,5 +1,6 @@
 package com.group4.onlinewatchstore.entities;
 
+import com.group4.onlinewatchstore.entities.factory.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
